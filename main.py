@@ -22,3 +22,5 @@ for _ in range(quantidade_sorteios):
     nome_sorteado = sorteio_nome(nomes)
     numero_sorteado = sorteio_numero()
     print(f"O nome sorteado é: {nome_sorteado} e o número sorteado é: {numero_sorteado}")
+
+print("Todos os sorteios foram realizados com sucesso!")
