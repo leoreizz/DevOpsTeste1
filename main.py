@@ -18,6 +18,8 @@ print(f"O número sorteado é: {numero_sorteado}")
 
 quantidade_sorteios = int(input("Quantos sorteios você quer realizar? "))
 
+print(f"Realizando {quantidade_sorteios} sorteios...")
+
 for _ in range(quantidade_sorteios):
     nome_sorteado = sorteio_nome(nomes)
     numero_sorteado = sorteio_numero()
