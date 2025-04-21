@@ -1,4 +1,4 @@
-name: discord
+name: Discord
 on:
     - push
 
