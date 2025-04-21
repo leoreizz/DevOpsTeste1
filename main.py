@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import random
 
 app = FastAPI()
-
+##testando o codigo
 # Função para sorteio de nomes
 def sorteio_nome(nomes):
     return random.choice(nomes)
