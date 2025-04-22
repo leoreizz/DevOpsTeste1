@@ -3,17 +3,15 @@ from unittest.mock import patch
 import pytest
 import pytest_asyncio
 
-@pytest.mark.asyncio
-async def test_sorteio_nome_mock():
+def test_sorteio_nome_mock():
     nomes = ["Ana", "Leo", "Kai"]
     with patch('random.choice', return_value="Ana"):
-        resultado = await sorteio_nome(nomes)
+        resultado = sorteio_nome(nomes)  # sem await aqui!
         assert resultado == "Ana"
 
-@pytest.mark.asyncio
-async def test_sorteio_numero_mock():
+def test_sorteio_numero_mock():
     with patch('random.randint', return_value=7):
-        numero = await sorteio_numero()
+        numero = sorteio_numero()  # sem await aqui também!
         assert numero == 7
 
 @pytest.mark.asyncio
@@ -30,3 +28,4 @@ async def test_realizar_sorteio():
 async def test_root():
     resultado = await root()
     assert resultado == {"message": "Bem-vindo à API de sorteios!"}
+
