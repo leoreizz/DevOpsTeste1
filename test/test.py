@@ -4,12 +4,12 @@ from unittest.mock import patch
 def test_sorteio_nome_mock():
     nomes = ["Ana", "Leo", "Kai"]
     with patch('random.choice', return_value="Ana"):
-        resultado = sorteio_nome(nomes)
+        resultado = yield sorteio_nome(nomes)
         assert resultado == "Ana"
 
 def test_sorteio_numero_mock():
     with patch('random.randint', return_value=7):
-        numero = sorteio_numero()
+        numero = yield sorteio_numero()
         assert numero == 7
 
 
@@ -24,5 +24,5 @@ def test_realizar_sorteio():
         assert "Todos os sorteios foram realizados com sucesso!" in resultado["resultados"]
 
 def test_root():
-    resultado = root()
+    resultado = yield root()
     assert resultado == {"message": "Bem-vindo à API de sorteios!"}
