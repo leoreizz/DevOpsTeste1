@@ -18,7 +18,6 @@ def test_realizar_sorteio():
         resultado = realizar_sorteio(quantidade_sorteios=3)
 
         yield resultado
-
         assert len(resultado["resultados"]) == 5
         assert "O nome sorteado é: Ana e o número sorteado é: 5" in resultado["resultados"]
         assert "A soma dos números sorteados é: 15" in resultado["resultados"]
