@@ -11,6 +11,9 @@ def sorteio_nome(nomes):
 def sorteio_numero():
     return random.randint(1, 10)
 
+def adicionar_numeros(a: int, b: int) -> int:
+    return a + b
+
 # Rota para realizar o sorteio
 @app.get("/sorteio/")
 async def realizar_sorteio(quantidade_sorteios: int):

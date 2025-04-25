@@ -14,6 +14,11 @@ def test_sorteio_numero_mock():
         numero = sorteio_numero()  # sem await aqui também!
         assert numero == 7
 
+def test_adicionar_numeros():
+    resultado = adicionar_numeros(2, 3)
+    assert resultado == 5, f"Esperado 5, mas obteve {resultado}"
+
+
 @pytest.mark.asyncio
 async def test_realizar_sorteio():
     with patch('src.main.sorteio_nome', return_value="Ana"), patch('src.main.sorteio_numero', return_value=5):
